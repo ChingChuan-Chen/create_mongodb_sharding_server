@@ -13,10 +13,14 @@ You can use `replica_primary.sh` and `replica_secondary.sh` to create more repli
 And `router2.sh` for more router servers.
 
 In your use, several things you must do:
+
 1. To modify the IP addresses to the IPs of your config server in `config_primary.sh` at line 81,82.
+
 1. To modify the IP addresses to the IPs of your config server in `router1.sh` at line 18,29,68.
+
 1. To modify the IP addresses to the IPs of your primary sharding server in `router1.sh` at line 43,44.
    If you have more sharding servers, you can append the lines to line 43. `sh.addShard("replica_set_name/primary_sharding_IP:primary_sharding_IP")`
+   
 1. To modify the IP addresses to the IPs of your config server in `router2.sh` at line 15,26,50.
 
 ## install mongodb
@@ -48,7 +52,7 @@ for 192.168.0.125,192.168.0.126
 ./replica_secondary.sh rs2
 ```
 
-### config server
+### config servers
 for 192.168.0.127
 ``` bash
 ./config_primary.sh drill drill
@@ -58,11 +62,12 @@ for 192.168.0.128,192.168.0.129
 ./config_secondary.sh
 ```
 
-### route1
+### router servers
 for 192.168.0.130
 ``` bash
 ./router1.sh drill drill
 ```
-for 192.168.0.131, ...
+for 192.168.0.131
+``` bash
 ./router2.sh
 ```

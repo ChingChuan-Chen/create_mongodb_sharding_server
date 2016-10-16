@@ -1,7 +1,7 @@
 # Install MongoDB Sharding Cluster
 These scripts is modified from https://github.com/Azure/azure-quickstart-templates/tree/master/mongodb-sharding-centos
 
-The setting for servers is 
+My setting for servers is 
 ```
 replica set 1: 192.168.0.121 (primary), 192.168.0.122, 192.168.0.123
 replica set 2: 192.168.0.124 (primary), 192.168.0.125, 192.168.0.126
@@ -13,6 +13,8 @@ You can use `replica_primary.sh` and `replica_secondary.sh` to create more repli
 And `router2.sh` for more router servers.
 
 In your use, several things you must do:
+
+1. Modify the rules to find the replica secondary servers in `replica_primary.sh` at line 95-113.
 
 1. To modify the IP addresses to the IPs of your config server in `config_primary.sh` at line 81,82.
 

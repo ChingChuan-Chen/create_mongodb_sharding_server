@@ -25,7 +25,7 @@ su
 cd /home/tester/mongodb_config_scripts/
 chmod +x *.sh
 ```
-各台執行`./install_mongodb.sh 該台IP`
+Implement `./install_mongodb.sh IP` in each computer.
 ex: ./install_mongodb.sh 192.168.0.121
 
 ### replica set 1
